@@ -28,7 +28,7 @@ for i in range(0,len(buddy_tracks)):
     testid=sushi.audio_graph.get_processor_id('muter_buddy_'+finalNumbers)
 
     #create the processor on the track
-    sushi.audio_graph.create_processor_on_track('mda_buddy', None, '/home/mind/plugins/mda-vst2/mdaLeslie.so',
+    sushi.audio_graph.create_processor_on_track('mda_buddy'+finalNumbers, None, '/home/mind/plugins/mda-vst2/mdaLeslie.so',
                                             PluginType.VST2X, buddy_tid, testid, False)
 
 
