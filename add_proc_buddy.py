@@ -7,10 +7,6 @@ from elkpy import sushierrors
 #connect to the board with a controller (parameters: ip and port, path of the proto file)
 sushi = sc.SushiController('192.168.0.249:51051', sushi_proto_def='C:/Users/pietr/OneDrive/Desktop/Uni/Magistrale/Research_Project/sushi-gui/venv/Lib/site-packages/sushi_rpc.proto')
 
-sushi.audio_graph.create_track('buddy_623', 2)
-sushi.audio_graph.create_track('buddy_101', 2)
-
-time.sleep(1)
 #get all the tracks
 alltracks = sushi.audio_graph.get_all_tracks()
 print(alltracks)
