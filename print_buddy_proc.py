@@ -6,13 +6,16 @@ from elkpy import sushierrors
 
 sushi = sc.SushiController('192.168.0.249:51051', sushi_proto_def='C:/Users/pietr/OneDrive/Desktop/Uni/Magistrale/Research_Project/sushi-gui/venv/Lib/site-packages/sushi_rpc.proto')
 
+#get all tracks
 alltracks = sushi.audio_graph.get_all_tracks()
 
+#filter the tracks with buddy in the name
 buddy_tracks = []
 for track in alltracks:
     if "buddy" in track.name:
         buddy_tracks.append(track)
 
+#print the processors on each buddy
 for i in range(0,len(buddy_tracks)):
     buddy_tid = int(buddy_tracks[i].id)
     
