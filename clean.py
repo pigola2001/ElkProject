@@ -25,7 +25,7 @@ for i in range(0,len(buddy_tracks)):
     trackParam=sushi.audio_graph.get_track_info(buddy_tid)
     buddy_name=trackParam.name
     finalNumbers=buddy_name[-3:]
-    procid=sushi.audio_graph.get_processor_id('return_buddy'+finalNumbers)
+    procid=sushi.audio_graph.get_processor_id('return_buddy_'+finalNumbers)
 
     #delete the buddy proc
     sushi.audio_graph.delete_processor_from_track(procid,buddy_tid)
