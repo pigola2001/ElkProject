@@ -28,7 +28,7 @@ for i in range(0,len(buddy_tracks)):
     testid=sushi.audio_graph.get_processor_id('muter_buddy_'+finalNumbers)
 
     #create the return processor on the track
-    sushi.audio_graph.create_processor_on_track('return_buddy'+finalNumbers, 'sushi.testing.return', None,
+    sushi.audio_graph.create_processor_on_track('return_buddy_'+finalNumbers, 'sushi.testing.return', None,
                                             PluginType.INTERNAL, buddy_tid, testid, False)
 
 
