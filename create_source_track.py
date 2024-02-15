@@ -47,7 +47,7 @@ for i in range(0,len(buddy_tracks)):
     testid=sushi.audio_graph.get_processor_id('muter_buddy_'+finalNumbers)
 
     #create the send plugin on the source track
-    sushi.audio_graph.create_processor_on_track('cimil_track_send'+finalNumbers, 'sushi.testing.send', None,
+    sushi.audio_graph.create_processor_on_track('cimil_track_send_'+finalNumbers, 'sushi.testing.send', None,
                                            PluginType.INTERNAL, cimil_id, None, True)
     
     #get the id of the send plugin
@@ -55,5 +55,5 @@ for i in range(0,len(buddy_tracks)):
     
     destId=sushi.parameters.get_property_id(sendId, 'destination_name')
 
-    sushi.parameters.set_property_value(sendId, destId, "return_buddy"+finalNumbers)
+    sushi.parameters.set_property_value(sendId, destId, "return_buddy_"+finalNumbers)
     
