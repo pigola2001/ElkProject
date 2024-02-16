@@ -3,7 +3,7 @@ Research project about effect integration in Elk
 
 File usage:
 
-create_source_track: creates a new track with a send and a plugin 
+test_synth: creates a new track with a send and a plugin 
 
 add_proc_own: adds a plugin to the own track
 
