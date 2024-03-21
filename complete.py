@@ -4,7 +4,7 @@ from elkpy.sushi_info_types import PluginType
 from elkpy.sushi_info_types import ProcessorState
 from elkpy import sushierrors
 
-IP_ADDRESS = '192.168.1.60'           #'192.168.0.249'
+IP_ADDRESS = '192.168.1.59'           #'192.168.0.249'      
 PORT = '51051'
 SUSHI_PROTO_FILE_PATH = 'C:/Users/pietr/OneDrive/Desktop/Uni/Magistrale/Research_Project/sushi-gui/venv/Lib/site-packages/sushi_rpc.proto'
 
@@ -23,13 +23,11 @@ for track in alltracks:
 
 #delete previously created processors
 
-allprocessors = sushi.audio_graph.get_all_processors()
+own_ret=sushi.audio_graph.get_processor_id('x_return_own')
+own_id=sushi.audio_graph.get_track_id('own')
 
-for proc in allprocessors:
-    if "x_" in proc.name:
-        for track in alltracks:
-            if proc.id in track.processors:
-                sushi.audio_graph.delete_processor_from_track(proc.id, track.id)
+sushi.audio_graph.delete_processor_from_track(own_ret, own_id)
+
 
 time.sleep(2)
 
