@@ -103,7 +103,7 @@ gainId=sushi.audio_graph.get_processor_id('x_gain')
 
 gainValueId=sushi.parameters.get_parameter_id(gainId, 'gain')
 
-sushi.parameters.set_parameter_value(gainId, gainValueId, 0.5)
+sushi.parameters.set_parameter_value(gainId, gainValueId, 0.8)
 
 ############################################
 
